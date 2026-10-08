@@ -13,9 +13,9 @@ def generate_blog_post():
     client = genai.Client(api_key=API_KEY)
     prompt = "네이버 블로그에 포스팅할 만한 매력적이고 유익한 글 1편을 작성해줘."
     
-    # 구글 요구 모델명 적용
+    # 에러 메시지가 요구하는 정확한 최신 모델명 적용
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.8-flash",
         contents=prompt,
     )
     return response.text
