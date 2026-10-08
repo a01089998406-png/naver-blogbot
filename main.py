@@ -13,7 +13,7 @@ def generate_blog_post():
     client = genai.Client(api_key=API_KEY)
     prompt = "네이버 블로그에 포스팅할 만한 매력적이고 유익한 글 1편을 작성해줘."
     
-    # 구글 최신 SDK 권장 모델 지정
+    # 올바른 최신 모델 지정
     response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=prompt,
@@ -36,7 +36,3 @@ if __name__ == "__main__":
     blog_content = generate_blog_post()
     send_email("[오늘의 블로그 자동 생성 원고]", blog_content)
     print("발송 완료!")
-
-
-
-
