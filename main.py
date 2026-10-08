@@ -1,4 +1,3 @@
-
 import os
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -36,3 +35,5 @@ if __name__ == "__main__":
     blog_content = generate_blog_post()
     send_email("[오늘의 블로그 자동 생성 원고]", blog_content)
     print("발송 완료!")
+
+
